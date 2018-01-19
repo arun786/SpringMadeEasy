@@ -3,6 +3,7 @@
 ## Annotations used in Spring Boot
 
 1. @SpringBootApplication
+2. @ComponentScan - This will specify the packages which are to be scanned.
 2. @Autowired
 3. @Component
 4. @Service
@@ -15,6 +16,32 @@ Types of Injection
 2. constructor
 
 TODO Difference between the two.
+
+## @Primary
+This is used to specify one of the beans of an interface which has multiple
+implementations to be called when the interface is autowired.
+
+        public interface SortAlgorithm {
+            int[] sort(int[] numbers);
+        }
+    
+    
+        @Service
+        @Primary
+        public class BubbleSort implements SortAlgorithm {
+            @Override
+            public int[] sort(int[] numbers) {
+                return new int[0];
+            }
+        }
+    
+        @Service
+        public class QuickSort implements SortAlgorithm {
+            @Override
+            public int[] sort(int[] numbers) {
+                return new int[0];
+            }
+        }
 
 ## @Qualifier 
 
