@@ -23,28 +23,28 @@ autowire a specific bean.
 
 example: 
 
-public interface SortAlgorithm {
-    int[] sort(int[] numbers);
-}
-
-
-@Service
-@Qualifier("BubbleSort")
-public class BubbleSort implements SortAlgorithm {
-    @Override
-    public int[] sort(int[] numbers) {
-        return new int[0];
+    public interface SortAlgorithm {
+        int[] sort(int[] numbers);
     }
-}
 
-@Service
-@Qualifier("QuickSort")
-public class QuickSort implements SortAlgorithm {
-    @Override
-    public int[] sort(int[] numbers) {
-        return new int[0];
+
+    @Service
+    @Qualifier("BubbleSort")
+    public class BubbleSort implements SortAlgorithm {
+        @Override
+        public int[] sort(int[] numbers) {
+            return new int[0];
+        }
     }
-}
+
+    @Service
+    @Qualifier("QuickSort")
+    public class QuickSort implements SortAlgorithm {
+        @Override
+        public int[] sort(int[] numbers) {
+            return new int[0];
+        }
+    }
 
 In the class where we call, we can use
 
