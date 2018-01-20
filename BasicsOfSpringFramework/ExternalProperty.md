@@ -2,6 +2,7 @@
 
 1. Create a yaml file in resources folder, as below
 
+    
     spring:
       profiles:
         active: dev
@@ -22,6 +23,7 @@
       data:
         name: dev001
         
+
 2. create a config file which reads the below data.
 
     
