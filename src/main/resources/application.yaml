@@ -1,12 +1,19 @@
 spring:
   profiles:
-    active: local
+    active: dev
 
+---
 spring:
-  profiles:
-    data:
+  profiles: local
+  data:
       name: tcrmd00
       username: root
       password: root
       url: jdbc:mysql://localhost:3306/tcrmd00
       driver: com.mysql.jdbc.Driver
+
+---
+spring:
+  profiles: dev
+  data:
+    name: dev001
