@@ -27,21 +27,21 @@
 2. create a config file which reads the below data.
 
     
-    package com.arun.springin5easysteps.config;
-    
-    import org.springframework.beans.factory.annotation.Value;
-    import org.springframework.stereotype.Component;
-    
-    @Component
-    public class ReadYAML {
-    
-        @Value("${spring.data.name}")
-        private String username;
-    
-        public String getUserName() {
-            return username;
+        package com.arun.springin5easysteps.config;
+        
+        import org.springframework.beans.factory.annotation.Value;
+        import org.springframework.stereotype.Component;
+        
+        @Component
+        public class ReadYAML {
+        
+            @Value("${spring.data.name}")
+            private String username;
+        
+            public String getUserName() {
+                return username;
+            }
         }
-    }
 
 
 3. We can use the class to read the file properties.
